@@ -54,7 +54,7 @@ def pregunta_02():
     )
 
     # Cree un clasificador con siete vecinos
-    knn = NeighborsClassifier(n_neighbors = 7)
+    knn = KNeighborsClassifier(n_neighbors=7)
 
     # Entrene el clasificador
     knn.fit(X_train,y_train)
