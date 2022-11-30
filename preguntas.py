@@ -73,6 +73,7 @@ def pregunta_03():
 
     # Importe train_test_split de sklearn.model_selection
     from sklearn.model_selection import train_test_split
+    import pandas as pd
 
     # Cargue el dataset digits
     digits = datasets.load_digits()
@@ -96,7 +97,7 @@ def pregunta_03():
     # Se itera sobre diferentes valores de vecinos
     for i, k in enumerate(neighbors):
         # Cree un clasificador con k vecinos
-        knn = KNeighborsClassifier(n_neighbors = k)
+        knn = KNeighborsClassifier(n_neighbors=k)
 
         # Entrene el clasificador con los datos de entrenamiento
         knn.fit(X_train, y_train)
